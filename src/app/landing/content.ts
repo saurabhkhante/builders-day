@@ -126,6 +126,22 @@ export const content = {
     anthropic: { who: "Every participant", amount: "$500", label: "in Claude credits" },
     cash: 5000,
     cashLabel: "in cash prizes",
+    /**
+     * Buildathon credit partners. Same tile for everyone and no amounts on purpose, so
+     * a smaller credit never looks small next to a bigger one. Alphabetical; no tiers.
+     * `h` is the logo height in px, tuned per logo so they look the same size.
+     */
+    partnersTitle: "Plus credits to build with",
+    partnersWho: "For buildathon builders",
+    partners: [
+      { name: "Apify", logo: "apify-color.svg", w: 512, h: 141, height: 27, what: "Web scraping and data" },
+      { name: "Crustdata", logo: "crustdata-color.png", w: 585, h: 163, height: 31, what: "Company and people data" },
+      { name: "Divyam.ai", logo: "divyam-color.svg", w: 788, h: 230, height: 38, what: "Smart LLM routing" },
+      { name: "ElevenLabs", logo: "elevenlabs-color.png", w: 1988, h: 257, height: 18, what: "Voice AI" },
+      { name: "Plivo", logo: "plivo-color.svg", w: 66, h: 24, height: 26, what: "Voice and SMS APIs" },
+      { name: "Sarvam", logo: "sarvam-color.png", w: 606, h: 96, height: 18, what: "AI for Indian languages" },
+      { name: "Token Factory by Nebius", logo: "nebius-color.svg", w: 403, h: 55, height: 22, what: "Open model inference" },
+    ],
   },
 
   /**
@@ -242,7 +258,7 @@ export const content = {
       },
       {
         q: "Do I get credits?",
-        a: "Yes. Every participant gets $500 in Claude credits with the Builder’s Pass. More partner credits are on the way, and we’ll add them here once they’re confirmed.",
+        a: "Yes. Every participant gets $500 in Claude credits with the Builder’s Pass. Buildathon builders also get credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius.",
         link: true,
       },
       {

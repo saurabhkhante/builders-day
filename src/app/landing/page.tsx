@@ -550,6 +550,34 @@ function Prizes() {
             </p>
           </div>
         </Reveal>
+        {/* Every other partner: one identical tile each, no amounts (see content.ts). */}
+        <Reveal delay={0.18} className="mx-auto mt-12 max-w-[920px] md:mt-16">
+          <div className="flex flex-col items-center text-center">
+            <p className="eyebrow text-cream-muted">{c.prizes.partnersWho}</p>
+            <h3 className="mt-3 font-serif text-[clamp(26px,3.4vw,36px)] leading-[1.05] font-bold tracking-[-0.02em] text-cream-ink">{c.prizes.partnersTitle}</h3>
+          </div>
+          <ul className="mt-7 flex flex-wrap justify-center gap-3 md:mt-9 md:gap-4">
+            {c.prizes.partners.map((p) => (
+              <li
+                key={p.name}
+                className="flex w-[calc(50%-6px)] flex-col items-center justify-center gap-3 rounded-[0_0_16px_0] border border-cream-rule bg-cream px-3 py-5 text-center sm:w-[200px] md:py-6"
+              >
+                <span className="flex h-9 items-center">
+                  <Image
+                    src={`/brand/partners/${p.logo}`}
+                    alt={p.name}
+                    width={p.w}
+                    height={p.h}
+                    unoptimized
+                    style={{ height: p.height, width: "auto" }}
+                    className="block max-w-full"
+                  />
+                </span>
+                <span className="text-[14px] leading-snug text-cream-muted">{p.what}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );
