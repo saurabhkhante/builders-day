@@ -129,19 +129,19 @@ export const content = {
     /**
      * Buildathon credit partners. Same tile for everyone; the amount is a small pill of the
      * same size on every tile, so a smaller credit never looks small next to a bigger one.
-     * Alphabetical; no tiers.
+     * Highest credit first (ties alphabetical); no tiers.
      * `h` is the logo height in px, tuned per logo so they look the same size.
      */
     partnersTitle: "Plus credits to build with",
     partnersWho: "For buildathon builders",
     partners: [
-      { name: "Apify", logo: "apify-color.svg", w: 512, h: 141, height: 27, what: "Web scraping and data", credit: "$50 credits" },
       { name: "Crustdata", logo: "crustdata-color.png", w: 585, h: 163, height: 31, what: "Company and people data", credit: "$1,000 credits" },
+      { name: "Sarvam", logo: "sarvam-color.png", w: 606, h: 96, height: 18, what: "AI for Indian languages", credit: "10,000 credits" },
       { name: "Divyam.ai", logo: "divyam-color.svg", w: 788, h: 230, height: 38, what: "Smart LLM routing", credit: "$100 credits" },
       { name: "ElevenLabs", logo: "elevenlabs-color.png", w: 1988, h: 257, height: 18, what: "Voice AI", credit: "$100 credits" },
       { name: "Plivo", logo: "plivo-color.svg", w: 66, h: 24, height: 26, what: "Voice and SMS APIs", credit: "$100 credits" },
-      { name: "Sarvam", logo: "sarvam-color.png", w: 606, h: 96, height: 18, what: "AI for Indian languages", credit: "10,000 credits" },
       { name: "Token Factory by Nebius", logo: "nebius-color.svg", w: 403, h: 55, height: 22, what: "Open model inference", credit: "$100 credits" },
+      { name: "Apify", logo: "apify-color.svg", w: 512, h: 141, height: 27, what: "Web scraping and data", credit: "$50 credits" },
     ],
   },
 
