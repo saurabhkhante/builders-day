@@ -560,8 +560,9 @@ function Prizes() {
             {c.prizes.partners.map((p) => (
               <li
                 key={p.name}
-                className="flex w-[calc(50%-6px)] flex-col items-center gap-3 rounded-[0_0_16px_0] border border-cream-rule bg-cream px-3 py-5 text-center sm:w-[200px] md:py-6"
+                className="relative flex w-[calc(50%-6px)] flex-col rounded-[0_0_16px_0] border border-cream-rule bg-cream text-center sm:w-[200px]"
               >
+                <span className="flex flex-1 flex-col items-center gap-3 px-3 pt-5 pb-4 md:pt-6">
                 <span className="flex h-9 items-center">
                   <Image
                     src={`/brand/partners/${p.logo}`}
@@ -574,7 +575,14 @@ function Prizes() {
                   />
                 </span>
                 <span className="text-[14px] leading-snug text-cream-muted">{p.what}</span>
-                <span className="mt-auto rounded-full bg-cream-card px-3 py-1.5 text-[13px] leading-none font-semibold text-cream-ink">{p.credit}</span>
+                </span>
+                {/* Ticket stub, like the Builder's Pass: tear line with notches, then the amount. */}
+                <span className="relative flex items-baseline justify-between gap-2 border-t border-dashed border-cream-rule px-4 py-3">
+                  <span aria-hidden="true" className="absolute -top-[7px] -left-[7px] size-3 rounded-full border border-cream-rule bg-cream [clip-path:inset(0_0_0_50%)]" />
+                  <span aria-hidden="true" className="absolute -top-[7px] -right-[7px] size-3 rounded-full border border-cream-rule bg-cream [clip-path:inset(0_50%_0_0)]" />
+                  <span className="eyebrow text-cream-muted">{c.prizes.partnersCredit}</span>
+                  <span className="font-serif text-[20px] leading-none font-bold text-cream-ink">{p.credit}</span>
+                </span>
               </li>
             ))}
           </ul>
