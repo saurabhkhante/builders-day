@@ -1,0 +1,242 @@
+{
+ "tpf": {
+  "wordmarkWhite": "tpf/tpf-wordmark-white.avif",
+  "unconference26": "tpf/unconference-2026.png",
+  "passTicket": "tpf/pass-ticket.png"
+ },
+ "hero": [
+  {
+   "name": "Figma",
+   "src": "hero/figma-white.svg",
+   "onDark": "ok"
+  },
+  {
+   "name": "Anthropic",
+   "src": "hero/anthropic-white.svg",
+   "onDark": "ok"
+  },
+  {
+   "name": "Replit",
+   "src": "hero/replit-white.svg",
+   "onDark": "ok"
+  }
+ ],
+ "partners": [
+  {
+   "name": "CodeRabbit",
+   "src": "partners/coderabbit.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Figr",
+   "src": "partners/figr.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Intuit",
+   "src": "partners/intuit.png",
+   "onDark": "ok"
+  },
+  {
+   "name": "Mixpanel",
+   "src": "partners/mixpanel.svg",
+   "onDark": "ok"
+  },
+  {
+   "name": "Plivo",
+   "src": "partners/plivo.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Sarvam",
+   "src": "partners/sarvam.png",
+   "onDark": "mono"
+  },
+  {
+   "name": "Toast",
+   "src": "partners/toast.svg",
+   "onDark": "ok"
+  }
+ ],
+ "hostCompanies": [
+  {
+   "name": "Razorpay",
+   "src": "companies/razorpay.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Paytm",
+   "src": "companies/paytm.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Ather",
+   "src": "companies/ather.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "CRED",
+   "src": "companies/cred.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "InMobi",
+   "src": "companies/inmobi.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Tracxn",
+   "src": "companies/tracxn.svg",
+   "onDark": "mono"
+  }
+ ],
+ "speakerCompanies": [
+  {
+   "name": "Anthropic",
+   "src": "companies/anthropic.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Flipkart",
+   "src": "companies/flipkart.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Replit",
+   "src": "companies/replit.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Myntra",
+   "src": "companies/myntra.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "NVIDIA",
+   "src": "companies/nvidia.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Meesho",
+   "src": "companies/meesho.png",
+   "onDark": "mono"
+  },
+  {
+   "name": "Stripe",
+   "src": "companies/stripe.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Swiggy",
+   "src": "companies/swiggy.avif",
+   "onDark": "mono"
+  },
+  {
+   "name": "OpenAI",
+   "src": "companies/openai.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Zomato",
+   "src": "companies/zomato.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Google",
+   "src": "companies/google.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Zepto",
+   "src": "companies/zepto.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Figma",
+   "src": "companies/figma.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "PhonePe",
+   "src": "companies/phonepe.svg",
+   "onDark": "mono"
+  }
+ ],
+ "attendeeCompanies": [
+  {
+   "name": "Urban Company",
+   "src": "companies/urban-company.png",
+   "onDark": "mono"
+  },
+  {
+   "name": "Atlassian",
+   "src": "companies/atlassian.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Lenskart",
+   "src": "companies/lenskart.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Glean",
+   "src": "companies/glean.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Headout",
+   "src": "companies/headout.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Rippling",
+   "src": "companies/rippling.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Salesforce",
+   "src": "companies/salesforce.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Microsoft",
+   "src": "companies/microsoft.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Groww",
+   "src": "companies/groww.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Databricks",
+   "src": "companies/databricks.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Zerodha",
+   "src": "companies/zerodha.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Snowflake",
+   "src": "companies/snowflake.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Nykaa",
+   "src": "companies/nykaa.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Confluent",
+   "src": "companies/confluent.svg",
+   "onDark": "mono"
+  },
+  {
+   "name": "Rapido",
+   "src": "companies/rapido.svg",
+   "onDark": "mono"
+  }
+ ]
+}
