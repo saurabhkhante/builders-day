@@ -7,7 +7,6 @@ import { ArrowRightIcon, CalendarIcon, PinIcon } from "@/components/icons";
 import { LiveDot } from "@/components/motion/live-dot";
 import { Marquee } from "@/components/motion/marquee";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
-import { HashLink } from "@/components/shell/hash-link";
 import { HERO_PARTNERS, PAST_PHOTOS, TPF } from "@/lib/brand";
 import { cn } from "@/lib/cn";
 
@@ -59,7 +58,6 @@ export default function LandingPage() {
       {SHOW_SPEAKERS ? <Speakers /> : null}
       <Prizes />
       <Rfs />
-      <TheDay />
       <BuildersPass copy={c.pass} />
       <BackedBy labels={c.partners} />
       <Memories />
@@ -587,83 +585,6 @@ function Prizes() {
             ))}
           </ul>
         </Reveal>
-      </div>
-    </section>
-  );
-}
-
-/* ---------- The day ---------- */
-
-function TheDay() {
-  return (
-    <section
-      aria-labelledby="day-title"
-      className="relative overflow-hidden border-b border-rule bg-teal"
-    >
-      {/* Colour band: brand teal with a crimson bloom bottom-left and the stroked date, so it breaks up the dark run of sections. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-40 h-[520px] w-[720px] max-w-[160vw] rounded-full bg-[radial-gradient(closest-side,rgba(189,45,83,0.45),transparent)] blur-2xl"
-      />
-      <OutlineDate className="-right-[3vw] bottom-[-0.16em] hidden text-[clamp(140px,30vw,380px)] opacity-50 md:block" />
-      <div className="frame relative py-16 md:py-28">
-        <Reveal className="grid gap-6 md:grid-cols-12 md:items-end md:gap-8">
-          <div className="md:col-span-7">
-            <p className="eyebrow text-ink/75">{c.day.eyebrow}</p>
-            <h2 id="day-title" className="page-title mt-5 text-ink">
-              {c.day.title}
-            </h2>
-          </div>
-          <p className="max-w-[40ch] text-[18px] leading-[1.55] text-pretty text-ink/90 md:col-span-5 md:text-[19px]">
-            {c.day.body}
-          </p>
-        </Reveal>
-
-        <Reveal className="mt-12 md:mt-16">
-          <p className="eyebrow mb-4 flex items-center gap-2.5 text-gold">
-            <LiveDot tone="gold" />
-            {c.hero.countdownLabel}
-          </p>
-          <CountdownBig />
-        </Reveal>
-
-        <RevealGroup
-          as="ul"
-          stagger={0.07}
-          className="mt-16 grid grid-cols-1 border-t border-ink/20 sm:grid-cols-2 md:mt-24 lg:grid-cols-4"
-        >
-          {c.day.facts.map((f, i) => (
-            <RevealItem
-              as="li"
-              key={f.label}
-              y={12}
-              className={cn(
-                "flex flex-col gap-3 border-b border-ink/20 py-6 md:py-8",
-                i % 2 === 0 ? "sm:border-r sm:pr-6" : "sm:pl-6",
-                "lg:border-b-0 lg:px-6 lg:first:pl-0 lg:last:pr-0",
-                i < 3 ? "lg:border-r lg:border-r-ink/20" : "lg:border-r-0",
-              )}
-            >
-              <p className="eyebrow text-ink/70">{f.label}</p>
-              <p className="font-serif text-[26px] leading-tight font-bold text-ink md:text-[28px]">
-                {f.value}
-              </p>
-              {"link" in f && f.link ? (
-                <HashLink
-                  hash={f.href}
-                  publicUrl={PUBLIC_URLS.landing}
-                  className="text-[15px] font-semibold text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-ink"
-                >
-                  {f.note}
-                </HashLink>
-              ) : (
-                <p className="text-[15px] leading-relaxed text-ink/75">
-                  {f.note}
-                </p>
-              )}
-            </RevealItem>
-          ))}
-        </RevealGroup>
       </div>
     </section>
   );

@@ -216,18 +216,6 @@ export const content = {
     lumaEventId: "evt-SnuIjhsQLFAtXAq",
   },
 
-  day: {
-    eyebrow: "Sun 22 Nov · IST",
-    title: "The build afternoon",
-    body: "Show up, pick a problem, build. Mentors walk the floor the whole time, and the best builds get to demo.",
-    facts: [
-      { label: "Who", value: "Solo or in a group", note: "Groups of up to 3 people." },
-      { label: "Where", value: "Bengaluru, in person", note: "Venue goes out to confirmed attendees." },
-      { label: "With", value: "AI tools", note: "Bring a laptop and whatever you build with." },
-      { label: "Credits", value: "$500 in Claude credits", note: "See the Builder’s Pass", link: true, href: "#pass" },
-    ],
-  },
-
   partners: {
     eyebrow: "Partners of Product (Un)Conference ’26",
     title: "Backed by the best",
