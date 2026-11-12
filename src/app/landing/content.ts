@@ -55,6 +55,7 @@ export const content = {
     "Bengaluru",
     "Builder’s Pass",
     "Lightning talks",
+    "Agents panel",
     "4 hour buildathon",
     "Requests from Founders, Operators and VCs",
     "$1M+ in credits",
@@ -63,14 +64,15 @@ export const content = {
     "Mentors on the floor",
   ],
 
-  // Format only, no timings. Buildathon is the highlighted card.
+  // Format only, no timings. Buildathon sits in the middle and is the highlighted card.
   agenda: {
     eyebrow: "Day 2 · Sun 22 Nov",
     title: "The whole day, one pass",
-    body: "Talks to get the ideas flowing, then an afternoon of building. All on one Builder’s Pass.",
+    body: "Talks to get the ideas flowing, an afternoon of building, and a panel to close it out. All on one Builder’s Pass.",
     formats: [
       { n: "01", title: "Lightning talks", body: "Short, sharp talks on where things are heading. Longevity, physical AI, climate, education, space." },
       { n: "02", title: "Buildathon", body: "Four hours on a real problem from a founder, operator or VC. AI tools in hand, mentors on the floor. The best builds demo on stage.", tag: "The main event", featured: true },
+      { n: "03", title: "Panels", body: "Your next user isn’t human. People building for agents, on what changes." },
     ],
   },
 
