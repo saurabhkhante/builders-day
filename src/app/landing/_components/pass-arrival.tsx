@@ -16,9 +16,14 @@ export function PassArrival() {
     if (window.location.hash !== "#pass") return;
     const section = document.getElementById("pass");
     if (!section) return;
-    // Land on it ourselves too: the browser's own hash jump can run before
-    // fonts and images settle and leave it a little off.
-    const land = () => section.scrollIntoView({ block: "start" });
+    // Land on it ourselves: the browser's own hash jump can run before fonts
+    // and images settle, and it stacks the page's scroll-padding on the
+    // section's scroll-margin (160px down). Here the section sits right under
+    // the top bar so the ticket, perks and button get the most room.
+    const land = () => {
+      const bar = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--bar-h")) || 64;
+      window.scrollTo({ top: section.getBoundingClientRect().top + window.scrollY - bar, behavior: "instant" });
+    };
     land();
     section.dataset.arrived = "true";
     const settle = window.setTimeout(land, 250);
