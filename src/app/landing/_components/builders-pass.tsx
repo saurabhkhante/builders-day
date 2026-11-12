@@ -2,6 +2,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { cn } from "@/lib/cn";
 
 import { LumaPassButton } from "./luma-pass-button";
+import { PassArrival } from "./pass-arrival";
 
 /**
  * "Builder's Pass": the one pass for Day 2, drawn like the main
@@ -92,6 +93,12 @@ export function BuildersPass({ copy }: { copy: PassCopy }) {
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-[-10%] h-[640px] w-[900px] max-w-[160vw] -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(189,45,83,0.32),transparent)] blur-2xl"
       />
+      {/* Brighter bloom, hidden; flares once on arrival at #pass (see PassArrival). */}
+      <div
+        aria-hidden="true"
+        className="pass-flash pointer-events-none absolute top-1/2 left-[-10%] h-[640px] w-[900px] max-w-[160vw] -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(189,45,83,0.7),rgba(238,205,122,0.12)_55%,transparent)] opacity-0 blur-2xl"
+      />
+      <PassArrival />
       <div className="frame relative py-16 md:py-28">
         <Reveal className="max-w-2xl">
           <p className="eyebrow text-muted">{copy.eyebrow}</p>
@@ -103,8 +110,10 @@ export function BuildersPass({ copy }: { copy: PassCopy }) {
 
         <div className="mt-10 grid items-center gap-10 md:mt-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <Reveal y={28}>
-            <div className="transition-transform duration-500 ease-soft hover:rotate-0 lg:rotate-[-2deg]">
-              <Ticket copy={copy} />
+            <div className="pass-deal">
+              <div className="transition-transform duration-500 ease-soft hover:rotate-0 lg:rotate-[-2deg]">
+                <Ticket copy={copy} />
+              </div>
             </div>
             <p className="mt-4 text-[14px] text-muted">{copy.priceNote}</p>
           </Reveal>
@@ -123,7 +132,7 @@ export function BuildersPass({ copy }: { copy: PassCopy }) {
                 </RevealItem>
               ))}
             </RevealGroup>
-            <Reveal delay={0.1} className="mt-8">
+            <Reveal delay={0.1} className="pass-glow mt-8">
               <LumaPassButton eventId={copy.lumaEventId} className="w-full sm:w-auto">
                 {copy.cta}
               </LumaPassButton>

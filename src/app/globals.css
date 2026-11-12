@@ -328,6 +328,67 @@ body {
   padding-bottom: 0;
 }
 
+/* ---------- Arrival at #pass ----------
+ * Landing on the page at #pass (from the Requests for Builders button):
+ * the ticket is dealt onto the table, a brighter bloom flares behind it and
+ * the request button glows twice. PassArrival sets data-arrived. Nothing
+ * for reduced motion: the page just lands on the pass.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  #pass[data-arrived] .pass-deal {
+    animation: pass-deal 950ms var(--ease-out-soft) 250ms both;
+  }
+  #pass[data-arrived] .pass-flash {
+    animation: pass-flash 1900ms ease-out 350ms both;
+  }
+  #pass[data-arrived] .pass-glow {
+    animation: pass-glow 1100ms ease-in-out 1100ms 2;
+  }
+}
+
+@keyframes pass-deal {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -64px, 0) rotate(-9deg) scale(1.12);
+  }
+  55% {
+    opacity: 1;
+    transform: translate3d(0, 6px, 0) rotate(1deg) scale(0.985);
+  }
+  78% {
+    transform: translate3d(0, -2px, 0) rotate(-0.4deg) scale(1.004);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pass-flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes pass-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(238, 205, 122, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(238, 205, 122, 0.75));
+  }
+}
+
 /* ---------- Keyframes ---------- */
 
 /* Podcast "now playing" equaliser bars. */
