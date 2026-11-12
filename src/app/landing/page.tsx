@@ -7,6 +7,7 @@ import { ArrowRightIcon, CalendarIcon, PinIcon } from "@/components/icons";
 import { LiveDot } from "@/components/motion/live-dot";
 import { Marquee } from "@/components/motion/marquee";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
+import { HashLink } from "@/components/shell/hash-link";
 import { HERO_PARTNERS, PAST_PHOTOS, TPF } from "@/lib/brand";
 import { cn } from "@/lib/cn";
 
@@ -58,6 +59,7 @@ export default function LandingPage() {
       {SHOW_SPEAKERS ? <Speakers /> : null}
       <Prizes />
       <Rfs />
+      <TheDay />
       <BuildersPass copy={c.pass} />
       <BackedBy labels={c.partners} />
       <Memories />
@@ -585,6 +587,46 @@ function Prizes() {
             ))}
           </ul>
         </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- The day (minimal) ---------- */
+
+/** A short teal band between the problems and the pass: the title and four facts in one row. It mostly breaks up the dark run of sections. */
+function TheDay() {
+  return (
+    <section aria-labelledby="day-title" className="relative overflow-hidden border-b border-rule bg-teal">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 -left-40 h-[420px] w-[620px] max-w-[160vw] rounded-full bg-[radial-gradient(closest-side,rgba(189,45,83,0.4),transparent)] blur-2xl"
+      />
+      <div className="frame relative py-12 md:py-16">
+        <Reveal>
+          <p className="eyebrow text-ink/75">{c.day.eyebrow}</p>
+          <h2 id="day-title" className="mt-3 font-serif text-[clamp(30px,4vw,44px)] leading-[1.05] font-bold tracking-[-0.02em] text-ink">
+            {c.day.title}
+          </h2>
+        </Reveal>
+        <RevealGroup as="ul" stagger={0.06} className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-ink/20 pt-6 md:mt-10 md:grid-cols-4 md:pt-8">
+          {c.day.facts.map((f) => (
+            <RevealItem as="li" key={f.label} y={10} className="flex flex-col gap-1.5">
+              <p className="eyebrow text-ink/65">{f.label}</p>
+              {"href" in f ? (
+                <HashLink
+                  hash={f.href}
+                  publicUrl={PUBLIC_URLS.landing}
+                  className="text-[17px] leading-snug font-semibold text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-ink md:text-[19px]"
+                >
+                  {f.value}
+                </HashLink>
+              ) : (
+                <p className="text-[17px] leading-snug font-semibold text-ink md:text-[19px]">{f.value}</p>
+              )}
+            </RevealItem>
+          ))}
+        </RevealGroup>
       </div>
     </section>
   );

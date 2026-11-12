@@ -216,6 +216,17 @@ export const content = {
     lumaEventId: "evt-SnuIjhsQLFAtXAq",
   },
 
+  day: {
+    eyebrow: "Sun 22 Nov · Bengaluru",
+    title: "The build afternoon",
+    facts: [
+      { label: "Who", value: "Solo or a group of up to 3" },
+      { label: "Where", value: "Bengaluru, in person" },
+      { label: "Bring", value: "A laptop and your AI tools" },
+      { label: "Credits", value: "$500 in Claude credits", href: "#pass" as const },
+    ],
+  },
+
   partners: {
     eyebrow: "Partners of Product (Un)Conference ’26",
     title: "Backed by the best",
