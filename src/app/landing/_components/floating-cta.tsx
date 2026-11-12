@@ -42,15 +42,32 @@ export function FloatingCta({
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
         if (e.target === hero) setHeroGone(!e.isIntersecting);
-        // In view or scrolled past (the footer): the bar would cover footer links.
-        if (e.target === final) setFinalShown(e.isIntersecting || e.boundingClientRect.top < 0);
         if (e.target === pass) setPassShown(e.isIntersecting);
       }
     });
     if (hero) io.observe(hero);
-    if (final) io.observe(final);
     if (pass) io.observe(pass);
-    return () => io.disconnect();
+    // The final CTA counts as shown once its top is on screen, and stays shown
+    // over the footer below it (the bar would cover footer links). Read on
+    // scroll rather than by IntersectionObserver, which misses a jump from the
+    // footer back up past it (no crossing, so no callback).
+    let raf = 0;
+    const checkFinal = () => {
+      raf = 0;
+      if (final) setFinalShown(final.getBoundingClientRect().top < window.innerHeight);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(checkFinal);
+    };
+    checkFinal();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      io.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   const show = heroGone && !finalShown && !passShown;
