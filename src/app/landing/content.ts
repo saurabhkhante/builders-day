@@ -205,6 +205,7 @@ export const content = {
       { text: "$1M+ in credits", strong: true },
       { text: "$5,000 in cash prizes for winners", strong: true },
       { text: "Lightning talks from people building on the frontier" },
+      { text: "A panel on building for agents" },
       { text: "Four hours of building on real problems from founders, operators and VCs" },
       { text: "Mentors on the floor" },
       { text: "Top builds demo on stage" },
