@@ -560,7 +560,7 @@ function Prizes() {
             {c.prizes.partners.map((p) => (
               <li
                 key={p.name}
-                className="flex w-[calc(50%-6px)] flex-col items-center justify-center gap-3 rounded-[0_0_16px_0] border border-cream-rule bg-cream px-3 py-5 text-center sm:w-[200px] md:py-6"
+                className="flex w-[calc(50%-6px)] flex-col items-center gap-3 rounded-[0_0_16px_0] border border-cream-rule bg-cream px-3 py-5 text-center sm:w-[200px] md:py-6"
               >
                 <span className="flex h-9 items-center">
                   <Image
@@ -574,6 +574,7 @@ function Prizes() {
                   />
                 </span>
                 <span className="text-[14px] leading-snug text-cream-muted">{p.what}</span>
+                <span className="mt-auto rounded-full bg-cream-card px-3 py-1.5 text-[13px] leading-none font-semibold text-cream-ink">{p.credit}</span>
               </li>
             ))}
           </ul>
