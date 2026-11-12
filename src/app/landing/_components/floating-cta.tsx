@@ -42,7 +42,8 @@ export function FloatingCta({
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
         if (e.target === hero) setHeroGone(!e.isIntersecting);
-        if (e.target === final) setFinalShown(e.isIntersecting);
+        // In view or scrolled past (the footer): the bar would cover footer links.
+        if (e.target === final) setFinalShown(e.isIntersecting || e.boundingClientRect.top < 0);
         if (e.target === pass) setPassShown(e.isIntersecting);
       }
     });
