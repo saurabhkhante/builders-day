@@ -263,11 +263,11 @@ function Agenda() {
           </p>
         </Reveal>
 
-        {/* Talks and panels sit either side; the buildathon card in the middle is bigger, filled and tagged. */}
+        {/* Talks, then the buildathon: bigger, filled and tagged. */}
         <RevealGroup
           as="ul"
           stagger={0.08}
-          className="mt-10 grid gap-4 md:mt-16 md:grid-cols-[1fr_1.35fr_1fr] md:items-center md:gap-6"
+          className="mt-10 grid gap-4 md:mt-16 md:grid-cols-[1fr_1.35fr] md:items-center md:gap-6"
         >
           {c.agenda.formats.map((f) => {
             const featured = "featured" in f && f.featured;
