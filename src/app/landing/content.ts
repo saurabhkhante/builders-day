@@ -60,7 +60,7 @@ export const content = {
     "Requests from Founders, Operators and VCs",
     "$1M+ in credits",
     "$5,000 in cash prizes",
-    "Solo or in a group of up to 3",
+    "Solo or in a group of up to 2",
     "Mentors on the floor",
   ],
 
@@ -220,7 +220,7 @@ export const content = {
     eyebrow: "Sun 22 Nov · Bengaluru",
     title: "The build afternoon",
     facts: [
-      { label: "Who", value: "Solo or a group of up to 3" },
+      { label: "Who", value: "Solo or a group of up to 2" },
       { label: "Where", value: "Bengaluru, in person" },
       { label: "Bring", value: "A laptop and your AI tools" },
       { label: "Credits", value: "$500 in Claude credits", href: "#pass" as const },
@@ -256,12 +256,16 @@ export const content = {
       },
       {
         q: "Solo or team?",
-        a: "Either works. Come solo or in a group of up to 3 people.",
+        a: "Either works. Come solo or in a group of up to 2 people.",
       },
       {
         q: "Do I get credits?",
         a: "Yes. Every participant gets $500 in Claude credits with the Builder’s Pass. Buildathon builders also get credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius.",
         link: true,
+      },
+      {
+        q: "When do I get the credits?",
+        a: "On the day of the event. We’ll share the credits with participants at the venue on Sun 22 Nov.",
       },
       {
         q: "Where exactly is it?",
