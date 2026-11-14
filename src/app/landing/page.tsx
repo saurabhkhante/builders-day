@@ -25,8 +25,8 @@ import { copy as requestsCopy } from "../requests/content";
 import { TpfFooter } from "@/components/shell/tpf-footer";
 import { content as c, EVENT_URL, PUBLIC_URLS } from "./content";
 
-/** Speakers section is hidden for now. Flip to show. */
-const SHOW_SPEAKERS = false;
+/** Speakers section: on since 14 Nov (Day 2 speakers live on the main site). */
+const SHOW_SPEAKERS = true;
 
 /** The request cards in the Problems section: c.rfs.featured, in order, shown exactly as on the board. */
 const FEATURED_REQUESTS = c.rfs.featured.flatMap((id) => VISIBLE.filter((r) => r.id === id));

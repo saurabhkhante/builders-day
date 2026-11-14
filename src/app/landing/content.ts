@@ -88,14 +88,14 @@ export const content = {
      * Flip `kind` once a name is confirmed.
      */
     list: [
-      { kind: "image", name: "Syed Adil", role: "Head of India", company: "Replit", session: "Panel", photo: "/brand/speakers/syed-adil.png" },
-      { kind: "image", name: "Mani", role: "Head of Product", company: "Sarvam", session: "Workshop: How I AI?", photo: "/brand/speakers/mani.png" },
-      { kind: "named", name: "Sanath Kumar", role: "", company: "Base", session: "Lightning talk · Longevity" },
-      { kind: "named", name: "Mahesh Narayanan", role: "", company: "Mod", session: "Panel · Your Next User Isn’t Human" },
-      { kind: "soon", name: "", role: "", company: "", session: "Lightning talk: Hardware and physical AI" },
-      { kind: "soon", name: "", role: "", company: "", session: "Lightning talk" },
-      { kind: "soon", name: "", role: "", company: "", session: "Panel" },
-      { kind: "soon", name: "", role: "", company: "", session: "Lightning talk" },
+      { kind: "image", name: "Syed Adil", role: "Head of India - Growth", company: "Replit", session: "Panel · Your Next 100M Users", photo: "/brand/speakers/syed-adil.png" },
+      { kind: "image", name: "Mahesh Narayanan", role: "Managing Director", company: "GPT1 Ventures", session: "Panel · Your Next 100M Users", photo: "/brand/speakers/mahesh-narayanan.png" },
+      { kind: "image", name: "Sanath Kumar", role: "Founder", company: "Deep Holistics", session: "Lightning talk · Longevity", photo: "/brand/speakers/sanath-kumar.png" },
+      { kind: "image", name: "Nishant Chandra", role: "Co-founder", company: "Newton School", session: "Lightning talk · AI Does the Work. You Make the Bet.", photo: "/brand/speakers/nishant-chandra.png" },
+      { kind: "image", name: "Mani", role: "Head of Product", company: "Sarvam", session: "Workshop · How I AI: Builder’s Guide", photo: "/brand/speakers/mani.png" },
+      { kind: "soon", name: "", role: "", company: "", session: "Panel · Your Next 100M Users" },
+      { kind: "soon", name: "", role: "", company: "", session: "Panel · Your Next 100M Users" },
+      { kind: "soon", name: "", role: "", company: "", session: "Lightning talk · The India Opportunity beyond Software" },
     ] as { kind: "image" | "named" | "soon"; name: string; role: string; company: string; session: string; photo?: string }[],
   },
 
