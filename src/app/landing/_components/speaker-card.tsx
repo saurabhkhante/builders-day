@@ -28,7 +28,7 @@ export function SpeakerCard({ speaker, soonLabel }: { speaker: Speaker; soonLabe
           alt={`${speaker.name}, ${speaker.role}, ${speaker.company}`}
           width={597}
           height={776}
-          sizes="(min-width: 1024px) 290px, 45vw"
+          sizes="(min-width: 1024px) 410px, (min-width: 768px) 31vw, 48vw"
           className="block h-auto w-full"
         />
         <figcaption className="sr-only">{speaker.session}</figcaption>

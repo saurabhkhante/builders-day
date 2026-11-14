@@ -348,10 +348,16 @@ function Speakers() {
         <RevealGroup
           as="ul"
           stagger={0.06}
-          className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:mt-14 lg:grid-cols-4 lg:gap-5"
+          className="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4 md:mt-14 lg:gap-5"
         >
+          {/* Two per row on phones, three from md up; a short last row stays centred. */}
           {c.speakers.list.map((s, i) => (
-            <RevealItem as="li" key={s.name || `soon-${i}`} y={16}>
+            <RevealItem
+              as="li"
+              key={s.name || `soon-${i}`}
+              y={16}
+              className="w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-1rem)/2)] md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-2.5rem)/3)]"
+            >
               <SpeakerCard speaker={s} soonLabel={c.speakers.soon} />
             </RevealItem>
           ))}

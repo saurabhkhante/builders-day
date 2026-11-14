@@ -93,9 +93,6 @@ export const content = {
       { kind: "image", name: "Sanath Kumar", role: "Founder", company: "Deep Holistics", session: "Lightning talk · Longevity", photo: "/brand/speakers/sanath-kumar.png" },
       { kind: "image", name: "Nishant Chandra", role: "Co-founder", company: "Newton School", session: "Lightning talk · AI Does the Work. You Make the Bet.", photo: "/brand/speakers/nishant-chandra.png" },
       { kind: "image", name: "Mani", role: "Head of Product", company: "Sarvam", session: "Workshop · How I AI: Builder’s Guide", photo: "/brand/speakers/mani.png" },
-      { kind: "soon", name: "", role: "", company: "", session: "Panel · Your Next 100M Users" },
-      { kind: "soon", name: "", role: "", company: "", session: "Panel · Your Next 100M Users" },
-      { kind: "soon", name: "", role: "", company: "", session: "Lightning talk · The India Opportunity beyond Software" },
     ] as { kind: "image" | "named" | "soon"; name: string; role: string; company: string; session: string; photo?: string }[],
   },
 
