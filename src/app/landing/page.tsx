@@ -333,15 +333,16 @@ function Agenda() {
 
 function Speakers() {
   return (
+    // Cream band, like the speakers section on the main UnConference page.
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="scroll-mt-20 border-b border-rule"
+      className="on-cream scroll-mt-20 border-b border-rule bg-cream text-cream-ink"
     >
       <div className="frame py-16 md:py-28">
         <Reveal className="text-center">
-          <p className="eyebrow text-muted">{c.speakers.eyebrow}</p>
-          <h2 id="speakers-title" className="page-title mt-5 text-ink">
+          <p className="eyebrow text-cream-muted">{c.speakers.eyebrow}</p>
+          <h2 id="speakers-title" className="page-title mt-5 text-cream-ink">
             {c.speakers.title}
           </h2>
         </Reveal>
@@ -363,10 +364,29 @@ function Speakers() {
           ))}
         </RevealGroup>
         <Reveal className="mt-10 text-center md:mt-14">
-          <p className="font-serif text-[24px] font-bold text-ink md:text-[30px]">
+          <p className="font-serif text-[24px] font-bold text-cream-ink md:text-[30px]">
             {c.speakers.more}
           </p>
         </Reveal>
+      </div>
+      {/* Dark strip of speaker names closes the cream band, so it doesn't run into the cream Prizes section. */}
+      <div className="bg-deep text-ink">
+        <Marquee
+          label="Speakers"
+          seconds={40}
+          fade={false}
+          gap="gap-6 pr-6 md:gap-10 md:pr-10"
+          listClassName="py-4 md:py-5"
+        >
+          {c.speakers.list.map((s) => (
+            <li key={s.name} className="flex items-center gap-6 md:gap-10">
+              <span className="text-[15px] font-bold tracking-[0.12em] whitespace-nowrap uppercase md:text-[17px]">
+                {s.name} <span className="text-muted">· {s.company}</span>
+              </span>
+              <span aria-hidden="true" className="inline-block size-2.5 rotate-45 bg-crimson" />
+            </li>
+          ))}
+        </Marquee>
       </div>
     </section>
   );
