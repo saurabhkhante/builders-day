@@ -12,7 +12,7 @@ export type Speaker = {
 };
 
 /**
- * Speaker card in the main UnConference site's style: a 597:776 beige card
+ * Speaker card in the main UnConference site's style: a square-cornered 597:776 beige card
  * with the name top-left and a black and white photo at the bottom.
  * - "image": the main site's own card image, used as is (text is baked in).
  * - "named": confirmed but no card yet, drawn to match with a big monogram.
@@ -22,13 +22,13 @@ export type Speaker = {
 export function SpeakerCard({ speaker, soonLabel }: { speaker: Speaker; soonLabel: string }) {
   if (speaker.kind === "image" && speaker.photo) {
     return (
-      <figure className="relative overflow-hidden rounded-card bg-cream-card">
+      <figure className="relative">
         <Image
           src={speaker.photo}
           alt={`${speaker.name}, ${speaker.role}, ${speaker.company}`}
           width={597}
           height={776}
-          sizes="(min-width: 1024px) 410px, (min-width: 768px) 31vw, 48vw"
+          sizes="(min-width: 768px) 290px, 48vw"
           className="block h-auto w-full"
         />
         <figcaption className="sr-only">{speaker.session}</figcaption>
@@ -40,7 +40,7 @@ export function SpeakerCard({ speaker, soonLabel }: { speaker: Speaker; soonLabe
 
   return (
     <article
-      className="@container relative aspect-[597/776] overflow-hidden rounded-card bg-cream-card text-cream-ink"
+      className="@container relative aspect-[597/776] overflow-hidden bg-cream-card text-cream-ink"
     >
       <div className="absolute inset-x-0 top-0 px-[5.5cqw] pt-[5.5cqw]">
         {named ? (

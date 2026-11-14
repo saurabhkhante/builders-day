@@ -348,15 +348,15 @@ function Speakers() {
         <RevealGroup
           as="ul"
           stagger={0.06}
-          className="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4 md:mt-14 lg:gap-5"
+          className="mx-auto mt-10 flex max-w-[922px] flex-wrap justify-center gap-4 min-[480px]:gap-8 md:mt-14"
         >
-          {/* Two per row on phones, three from md up; a short last row stays centred. */}
+          {/* Main site's card size and gaps (1240px frame, 4-up cards = 286px, 2rem gap), three per row from md, two below; a short last row stays centred. */}
           {c.speakers.list.map((s, i) => (
             <RevealItem
               as="li"
               key={s.name || `soon-${i}`}
               y={16}
-              className="w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-1rem)/2)] md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-2.5rem)/3)]"
+              className="w-[calc((100%-1rem)/2)] min-[480px]:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)]"
             >
               <SpeakerCard speaker={s} soonLabel={c.speakers.soon} />
             </RevealItem>
