@@ -122,7 +122,7 @@ export const content = {
     /** Only Anthropic is shown here; other partners are listed in `credits` below. */
     anthropic: { who: "Every participant", amount: "$500", label: "in Claude credits" },
     cash: 5000,
-    cashLabel: "in cash prizes",
+    cashLabel: "in cash prizes for winners",
     /**
      * Buildathon credit partners. Same tile for everyone; the amount sits in a ticket stub
      * of the same size on every tile, so a smaller credit never looks small next to a bigger one.
