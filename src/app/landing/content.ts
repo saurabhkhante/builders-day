@@ -90,7 +90,7 @@ export const content = {
     list: [
       { kind: "image", name: "Syed Adil", role: "Head of India - Growth", company: "Replit", session: "Panel · Your Next 100M Users", photo: "/brand/speakers/syed-adil.png" },
       { kind: "image", name: "Mahesh Narayanan", role: "Managing Director", company: "GPT1 Ventures", session: "Panel · Your Next 100M Users", photo: "/brand/speakers/mahesh-narayanan.png" },
-      { kind: "image", name: "Sanath Kumar", role: "Founder", company: "Deep Holistics", session: "Lightning talk · Longevity", photo: "/brand/speakers/sanath-kumar.png" },
+      { kind: "image", name: "Sanath Kumar", role: "Co-founder", company: "Base", session: "Lightning talk · Longevity", photo: "/brand/speakers/sanath-kumar.png" },
       { kind: "image", name: "Nishant Chandra", role: "Co-founder", company: "Newton School", session: "Lightning talk · AI Does the Work. You Make the Bet.", photo: "/brand/speakers/nishant-chandra.png" },
       { kind: "image", name: "Mani", role: "Head of Product", company: "Sarvam", session: "Workshop · How I AI: Builder’s Guide", photo: "/brand/speakers/mani.png" },
     ] as { kind: "image" | "named" | "soon"; name: string; role: string; company: string; session: string; photo?: string }[],
