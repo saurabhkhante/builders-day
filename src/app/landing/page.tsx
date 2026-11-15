@@ -547,23 +547,6 @@ function Prizes() {
               </span>
             </h2>
           </Reveal>
-          <Reveal delay={0.12} className="mt-10 md:mt-14">
-            <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-[0_0_20px_0] bg-cream-ink px-6 py-4 text-cream md:gap-x-5 md:px-9 md:py-5">
-              <span
-                aria-hidden="true"
-                className="font-serif text-[clamp(28px,4vw,44px)] leading-none font-bold text-gold"
-              >
-                +
-              </span>
-              <PrizeAmount
-                amount={c.prizes.cash}
-                className="block font-serif text-[clamp(36px,5.4vw,64px)] leading-none font-bold tracking-[-0.02em] text-cream"
-              />
-              <span className="block font-serif text-[clamp(20px,2.6vw,30px)] leading-[1.1] font-bold">
-                {c.prizes.cashLabel}
-              </span>
-            </p>
-          </Reveal>
         </div>
         {/* Partner breakdown (./_components/credits-breakdown) is off until the other amounts are confirmed. Anthropic only for now. */}
         <Reveal id="credits" delay={0.15} className="mx-auto mt-12 max-w-[440px] scroll-mt-24 md:mt-16">
@@ -612,6 +595,24 @@ function Prizes() {
               </li>
             ))}
           </ul>
+        </Reveal>
+        {/* Cash prizes close the section, after the credits. */}
+        <Reveal delay={0.12} className="mt-12 flex justify-center md:mt-16">
+          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-[0_0_20px_0] bg-cream-ink px-6 py-4 text-cream md:gap-x-5 md:px-9 md:py-5">
+            <span
+              aria-hidden="true"
+              className="font-serif text-[clamp(28px,4vw,44px)] leading-none font-bold text-gold"
+            >
+              +
+            </span>
+            <PrizeAmount
+              amount={c.prizes.cash}
+              className="block font-serif text-[clamp(36px,5.4vw,64px)] leading-none font-bold tracking-[-0.02em] text-cream"
+            />
+            <span className="block font-serif text-[clamp(20px,2.6vw,30px)] leading-[1.1] font-bold">
+              {c.prizes.cashLabel}
+            </span>
+          </p>
         </Reveal>
       </div>
     </section>
