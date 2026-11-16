@@ -598,7 +598,8 @@ function Prizes() {
         </Reveal>
         {/* Cash prizes close the section, after the credits. */}
         <Reveal delay={0.12} className="mt-12 flex justify-center md:mt-16">
-          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-[0_0_20px_0] bg-cream-ink px-6 py-4 text-cream md:gap-x-5 md:px-9 md:py-5">
+          <div className="flex flex-col items-center rounded-[0_0_20px_0] bg-cream-ink px-6 py-4 text-cream md:px-9 md:py-5">
+          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:gap-x-5">
             <span
               aria-hidden="true"
               className="font-serif text-[clamp(28px,4vw,44px)] leading-none font-bold text-gold"
@@ -613,6 +614,18 @@ function Prizes() {
               {c.prizes.cashLabel}
             </span>
           </p>
+          <p className="mt-4 flex items-center gap-3 border-t border-cream/20 pt-4 md:mt-5 md:pt-5">
+            <span className="eyebrow text-cream/70">{c.prizes.cashSponsor.lead}</span>
+            <Image
+              src={`/brand/partners/${c.prizes.cashSponsor.logo}`}
+              alt={c.prizes.cashSponsor.name}
+              width={c.prizes.cashSponsor.w}
+              height={c.prizes.cashSponsor.h}
+              unoptimized
+              className="block h-8 w-auto md:h-10"
+            />
+          </p>
+          </div>
         </Reveal>
       </div>
     </section>

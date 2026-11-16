@@ -71,7 +71,7 @@ export const content = {
     body: "Talks to get the ideas flowing, an afternoon of building, and a panel to close it out. All on one Builder’s Pass.",
     formats: [
       { n: "01", title: "Lightning talks", body: "Short, sharp talks on where things are heading. Longevity, physical AI, climate, education, space." },
-      { n: "02", title: "Buildathon", body: "Four hours on a real problem from a founder, operator or VC. AI tools in hand, mentors on the floor. The best builds demo on stage.", tag: "The main event", featured: true },
+      { n: "02", title: "Speedrun", body: "Our buildathon: four hours on a real problem from a founder, operator or VC. AI tools in hand, mentors on the floor. The best builds demo on stage.", tag: "The main event", featured: true },
       { n: "03", title: "Panels", body: "Your next user isn’t human. People building for agents, on what changes." },
     ],
   },
@@ -123,6 +123,8 @@ export const content = {
     anthropic: { who: "Every participant", amount: "$500", label: "in Claude credits" },
     cash: 5000,
     cashLabel: "in cash prizes for winners",
+    /** Cash prize sponsor, shown inside the dark cash box. Logo is District's own cream wordmark (from district.in). */
+    cashSponsor: { lead: "Powered by", name: "District by Zomato", logo: "district-cream.svg", w: 886, h: 358 },
     /**
      * Buildathon credit partners. Same tile for everyone; the amount sits in a ticket stub
      * of the same size on every tile, so a smaller credit never looks small next to a bigger one.
