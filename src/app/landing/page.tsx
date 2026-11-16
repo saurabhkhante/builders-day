@@ -589,7 +589,7 @@ function Prizes() {
                 <span className="relative flex items-baseline justify-between gap-2 border-t border-dashed border-cream-rule px-4 py-3">
                   <span aria-hidden="true" className="absolute -top-[7px] -left-[7px] size-3 rounded-full border border-cream-rule bg-cream [clip-path:inset(0_0_0_50%)]" />
                   <span aria-hidden="true" className="absolute -top-[7px] -right-[7px] size-3 rounded-full border border-cream-rule bg-cream [clip-path:inset(0_50%_0_0)]" />
-                  <span className="eyebrow text-cream-muted">{c.prizes.partnersCredit}</span>
+                  <span className="eyebrow text-cream-muted">{"label" in p ? p.label : c.prizes.partnersCredit}</span>
                   <span className="font-serif text-[20px] leading-none font-bold text-cream-ink">{p.credit}</span>
                 </span>
               </li>

@@ -142,6 +142,8 @@ export const content = {
       { name: "Plivo", logo: "plivo-color.svg", w: 66, h: 24, height: 26, what: "Voice and SMS APIs", credit: "$100" },
       { name: "Token Factory by Nebius", logo: "nebius-color.svg", w: 403, h: 55, height: 22, what: "Open model inference", credit: "$100" },
       { name: "Apify", logo: "apify-color.svg", w: 512, h: 141, height: 27, what: "Web scraping and data", credit: "$50" },
+      // Not guaranteed: Descope reviews each startup's application, so it sits last despite the bigger number.
+      { name: "Descope", logo: "descope-color.png", w: 1816, h: 475, height: 24, what: "Startup plan, if you qualify", label: "Up to", credit: "$3,000" },
     ],
   },
 
