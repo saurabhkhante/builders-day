@@ -108,7 +108,7 @@ export const content = {
         label: "Judges",
         list: [
           { name: "Pratik Poddar", role: "Partner", company: "Nexus Venture Partners", photo: "/brand/mentors/pratik-poddar.png" },
-          { name: "Kiran Bangalore", role: "Partner General Manager", company: "Microsoft", photo: "/brand/mentors/kiran-bangalore.png" },
+          { name: "Kiran Bangalore", role: "Partner General Manager", company: "Ex-Microsoft", photo: "/brand/mentors/kiran-bangalore.png" },
         ],
       },
       {
