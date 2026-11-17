@@ -112,6 +112,7 @@ export const content = {
       { name: "Ranjeet Walunj", role: "CPTO", company: "Pluto", photo: "/brand/mentors/ranjeet-walunj.png" },
       { name: "Aparna Chugh", role: "Head of Product", company: "Atomicwork", photo: "/brand/mentors/aparna-chugh.png" },
       { name: "Isha Inani", role: "Senior Director of Product", company: "Disney+ Hotstar", photo: "/brand/mentors/isha-inani.png" },
+      { name: "Rohit Khanna", role: "VP Engineering and Site Lead", company: "CodeRabbit", photo: "/brand/mentors/rohit-khanna.png" },
     ] as { name: string; role: string; company: string; photo: string }[],
   },
 
