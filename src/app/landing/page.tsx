@@ -59,6 +59,7 @@ export default function LandingPage() {
       {SHOW_SPEAKERS ? <Speakers /> : null}
       <Prizes />
       <Rfs />
+      <Mentors />
       <TheDay />
       <BuildersPass copy={c.pass} />
       <BackedBy labels={c.partners} />
@@ -387,6 +388,60 @@ function Speakers() {
             </li>
           ))}
         </Marquee>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Mentors & judges ---------- */
+
+function Mentors() {
+  return (
+    // Same cream band and card grid as Speakers; sits between the dark problems section and the teal band.
+    <section
+      id="mentors"
+      aria-labelledby="mentors-title"
+      className="on-cream scroll-mt-20 border-b border-rule bg-cream text-cream-ink"
+    >
+      <div className="frame py-16 md:py-28">
+        <Reveal className="text-center">
+          <p className="eyebrow text-cream-muted">{c.mentors.eyebrow}</p>
+          <h2 id="mentors-title" className="page-title mt-5 text-cream-ink">
+            {c.mentors.title}
+          </h2>
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] leading-relaxed text-cream-muted md:text-[18px]">
+            {c.mentors.body}
+          </p>
+        </Reveal>
+        {c.mentors.groups.map((g) => (
+          <div key={g.label} className="mt-12 md:mt-16">
+            <Reveal className="text-center">
+              <h3 className="eyebrow text-cream-muted">{g.label}</h3>
+            </Reveal>
+            <RevealGroup
+              as="ul"
+              stagger={0.06}
+              className="mx-auto mt-6 flex max-w-[922px] flex-wrap justify-center gap-4 min-[480px]:gap-8 md:mt-8"
+            >
+              {g.list.map((p) => (
+                <RevealItem
+                  as="li"
+                  key={p.name}
+                  y={16}
+                  className="w-[calc((100%-1rem)/2)] min-[480px]:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)]"
+                >
+                  <SpeakerCard
+                    speaker={{ kind: "image", name: p.name, role: p.role, company: p.company, session: g.label.replace(/s$/, ""), photo: p.photo }}
+                    soonLabel=""
+                  />
+                </RevealItem>
+              ))}
+            </RevealGroup>
+          </div>
+        ))}
+        <Reveal className="mt-10 text-center md:mt-14">
+          <p className="font-serif text-[24px] font-bold text-cream-ink md:text-[30px]">{c.mentors.more}</p>
+        </Reveal>
       </div>
     </section>
   );
