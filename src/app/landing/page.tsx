@@ -57,9 +57,9 @@ export default function LandingPage() {
       <Ticker />
       <Agenda />
       {SHOW_SPEAKERS ? <Speakers /> : null}
+      <Mentors />
       <Prizes />
       <Rfs />
-      <Mentors />
       <TheDay />
       <BuildersPass copy={c.pass} />
       <BackedBy labels={c.partners} />
@@ -397,7 +397,7 @@ function Speakers() {
 
 function Mentors() {
   return (
-    // Same cream band and card grid as Speakers; sits between the dark problems section and the teal band.
+    // Same cream band, card grid and closing name strip as Speakers, right after it.
     <section
       id="mentors"
       aria-labelledby="mentors-title"
@@ -413,35 +413,47 @@ function Mentors() {
             {c.mentors.body}
           </p>
         </Reveal>
-        {c.mentors.groups.map((g) => (
-          <div key={g.label} className="mt-12 md:mt-16">
-            <Reveal className="text-center">
-              <h3 className="eyebrow text-cream-muted">{g.label}</h3>
-            </Reveal>
-            <RevealGroup
-              as="ul"
-              stagger={0.06}
-              className="mx-auto mt-6 flex max-w-[922px] flex-wrap justify-center gap-4 min-[480px]:gap-8 md:mt-8"
+        <RevealGroup
+          as="ul"
+          stagger={0.06}
+          className="mx-auto mt-10 flex max-w-[922px] flex-wrap justify-center gap-4 min-[480px]:gap-8 md:mt-14"
+        >
+          {c.mentors.list.map((p) => (
+            <RevealItem
+              as="li"
+              key={p.name}
+              y={16}
+              className="w-[calc((100%-1rem)/2)] min-[480px]:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)]"
             >
-              {g.list.map((p) => (
-                <RevealItem
-                  as="li"
-                  key={p.name}
-                  y={16}
-                  className="w-[calc((100%-1rem)/2)] min-[480px]:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)]"
-                >
-                  <SpeakerCard
-                    speaker={{ kind: "image", name: p.name, role: p.role, company: p.company, session: g.label.replace(/s$/, ""), photo: p.photo }}
-                    soonLabel=""
-                  />
-                </RevealItem>
-              ))}
-            </RevealGroup>
-          </div>
-        ))}
+              <SpeakerCard
+                speaker={{ kind: "image", name: p.name, role: p.role, company: p.company, session: c.mentors.title, photo: p.photo }}
+                soonLabel=""
+              />
+            </RevealItem>
+          ))}
+        </RevealGroup>
         <Reveal className="mt-10 text-center md:mt-14">
           <p className="font-serif text-[24px] font-bold text-cream-ink md:text-[30px]">{c.mentors.more}</p>
         </Reveal>
+      </div>
+      {/* Same dark name strip as Speakers, so this cream band doesn't run into the cream Prizes section. */}
+      <div className="bg-deep text-ink">
+        <Marquee
+          label="Mentors and judges"
+          seconds={40}
+          fade={false}
+          gap="gap-6 pr-6 md:gap-10 md:pr-10"
+          listClassName="py-4 md:py-5"
+        >
+          {c.mentors.list.map((p) => (
+            <li key={p.name} className="flex items-center gap-6 md:gap-10">
+              <span className="text-[15px] font-bold tracking-[0.12em] whitespace-nowrap uppercase md:text-[17px]">
+                {p.name} <span className="text-muted">· {p.company}</span>
+              </span>
+              <span aria-hidden="true" className="inline-block size-2.5 rotate-45 bg-crimson" />
+            </li>
+          ))}
+        </Marquee>
       </div>
     </section>
   );

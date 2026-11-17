@@ -31,9 +31,9 @@ export const content = {
     menu: "Menu",
     links: [
       { label: "Format", href: "#agenda" },
+      { label: "Mentors", href: "#mentors" },
       { label: "Prizes", href: "#prizes" },
       { label: "Problems", href: "#rfs" },
-      { label: "Mentors", href: "#mentors" },
       { label: "Pass", href: "#pass" },
       { label: "FAQ", href: "#faq" },
       { label: "Unconference", href: PUBLIC_URLS.unconference, external: true },
@@ -103,26 +103,17 @@ export const content = {
     title: "Mentors & judges",
     body: "Product and engineering leaders on the floor while you build, and on the panel when you demo.",
     more: "& more to be announced",
-    groups: [
-      {
-        label: "Judges",
-        list: [
-          { name: "Pratik Poddar", role: "Partner", company: "Nexus Venture Partners", photo: "/brand/mentors/pratik-poddar.png" },
-          { name: "Kiran Bangalore", role: "Partner General Manager", company: "Ex-Microsoft", photo: "/brand/mentors/kiran-bangalore.png" },
-        ],
-      },
-      {
-        label: "Mentors",
-        list: [
-          { name: "Sripriya GN", role: "Head of Product", company: "NeoSapien", photo: "/brand/mentors/sripriya-gn.png" },
-          { name: "Nithin Rangarajan", role: "VP Product", company: "Chargebee", photo: "/brand/mentors/nithin-rangarajan.png" },
-          { name: "Prashanth Rao", role: "Senior Director and India Product Head", company: "Docusign", photo: "/brand/mentors/prashanth-rao.png" },
-          { name: "Ranjeet Walunj", role: "CPTO", company: "Pluto", photo: "/brand/mentors/ranjeet-walunj.png" },
-          { name: "Aparna Chugh", role: "Head of Product", company: "Atomicwork", photo: "/brand/mentors/aparna-chugh.png" },
-          { name: "Isha Inani", role: "Senior Director of Product", company: "Disney+ Hotstar", photo: "/brand/mentors/isha-inani.png" },
-        ],
-      },
-    ] as { label: string; list: { name: string; role: string; company: string; photo: string }[] }[],
+    /** One grid, judges first. */
+    list: [
+      { name: "Pratik Poddar", role: "Partner", company: "Nexus Venture Partners", photo: "/brand/mentors/pratik-poddar.png" },
+      { name: "Kiran Bangalore", role: "Partner General Manager", company: "Ex-Microsoft", photo: "/brand/mentors/kiran-bangalore.png" },
+      { name: "Sripriya GN", role: "Head of Product", company: "NeoSapien", photo: "/brand/mentors/sripriya-gn.png" },
+      { name: "Nithin Rangarajan", role: "VP Product", company: "Chargebee", photo: "/brand/mentors/nithin-rangarajan.png" },
+      { name: "Prashanth Rao", role: "Senior Director and India Product Head", company: "Docusign", photo: "/brand/mentors/prashanth-rao.png" },
+      { name: "Ranjeet Walunj", role: "CPTO", company: "Pluto", photo: "/brand/mentors/ranjeet-walunj.png" },
+      { name: "Aparna Chugh", role: "Head of Product", company: "Atomicwork", photo: "/brand/mentors/aparna-chugh.png" },
+      { name: "Isha Inani", role: "Senior Director of Product", company: "Disney+ Hotstar", photo: "/brand/mentors/isha-inani.png" },
+    ] as { name: string; role: string; company: string; photo: string }[],
   },
 
   rfs: {
