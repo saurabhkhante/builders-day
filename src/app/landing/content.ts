@@ -101,7 +101,6 @@ export const content = {
   mentors: {
     eyebrow: "In the room",
     title: "Mentors & judges",
-    body: "Product and engineering leaders on the floor while you build, and on the panel when you demo.",
     more: "& more to be announced",
     /** One grid, judges first. */
     list: [

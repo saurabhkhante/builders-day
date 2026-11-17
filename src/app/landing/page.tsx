@@ -409,9 +409,6 @@ function Mentors() {
           <h2 id="mentors-title" className="page-title mt-5 text-cream-ink">
             {c.mentors.title}
           </h2>
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] leading-relaxed text-cream-muted md:text-[18px]">
-            {c.mentors.body}
-          </p>
         </Reveal>
         <RevealGroup
           as="ul"
