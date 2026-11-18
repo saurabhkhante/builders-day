@@ -302,12 +302,24 @@ export const content = {
       },
       {
         q: "Do I get credits?",
-        a: "Yes. Every builder gets $500 in Claude credits, plus credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius, and Descope’s startup plan if you qualify. You need to be at the venue to get them.",
+        a: "Yes. Every builder gets Claude credits ($500 with a work email, $100 with a personal one), plus credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius, and Descope’s startup plan if you qualify. You need to be at the venue to get them.",
         link: true,
       },
       {
         q: "When do I get the credits?",
-        a: "At the venue, on Sun 22 Nov. Credits go to builders who are there in person, so being there is a must.",
+        a: "Partner credits are shared at the venue on Sun 22 Nov, so being there is a must. Claude credits go straight to the email you registered with.",
+      },
+      {
+        q: "How much in Claude credits do I get?",
+        a: "It depends on the email you registered with. Anthropic issues $500 in Claude credits to a work email and $100 to a personal email (like Gmail).",
+      },
+      {
+        q: "Where do my Claude credits go?",
+        a: "Straight to the email you registered with. Anthropic issues them directly, so keep an eye on that inbox.",
+      },
+      {
+        q: "I registered after 19 Nov. When do I get my Claude credits?",
+        a: "After the UnConference. If you sign up after 19 Nov, your Claude credits are issued once the event is over.",
       },
       {
         q: "Where exactly is it?",
