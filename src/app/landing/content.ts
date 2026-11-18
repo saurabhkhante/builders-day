@@ -153,7 +153,7 @@ export const content = {
     creditsHeadline: "$1M+",
     creditsLabel: "in credits",
     /** Only Anthropic is shown here; other partners are listed in `credits` below. */
-    anthropic: { who: "Every participant", amount: "$500", label: "in Claude credits" },
+    anthropic: { who: "Every builder", amount: "$500", label: "in Claude credits" },
     cash: 5000,
     cashLabel: "in cash prizes for winners",
     /** Cash prize sponsor, shown inside the dark cash box. Logo is District's own cream wordmark (from district.in). */
@@ -166,7 +166,7 @@ export const content = {
      */
     partnersTitle: "Plus credits to build with",
     partnersCredit: "Credits",
-    partnersWho: "For buildathon builders",
+    partnersWho: "For every builder",
     partners: [
       { name: "Crustdata", logo: "crustdata-color.png", w: 585, h: 163, height: 31, what: "Company and people data", credit: "$1,000" },
       { name: "Sarvam", logo: "sarvam-color.png", w: 606, h: 96, height: 18, what: "AI for Indian languages", credit: "10,000" },
@@ -235,7 +235,7 @@ export const content = {
     price: "₹1999",
     priceNote: "Day 2 only. For both days, see the main UnConference passes.",
     perks: [
-      { text: "$500 in Claude credits for every participant", strong: true },
+      { text: "$500 in Claude credits for every builder", strong: true },
       { text: "$1M+ in credits", strong: true },
       { text: "$5,000 in cash prizes for winners", strong: true },
       { text: "Lightning talks from people building on the frontier" },
@@ -302,16 +302,16 @@ export const content = {
       },
       {
         q: "Do I get credits?",
-        a: "Yes. Every participant gets $500 in Claude credits with the Builder’s Pass. Buildathon builders also get credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius.",
+        a: "Yes. Every builder gets $500 in Claude credits, plus credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius, and Descope’s startup plan if you qualify. You need to be at the venue to get them.",
         link: true,
       },
       {
         q: "When do I get the credits?",
-        a: "On the day of the event. We’ll share the credits with participants at the venue on Sun 22 Nov.",
+        a: "At the venue, on Sun 22 Nov. Credits go to builders who are there in person, so being there is a must.",
       },
       {
         q: "Where exactly is it?",
-        a: "Bengaluru. The venue is shared with confirmed attendees.",
+        a: "Bengaluru. The venue is shared with confirmed builders.",
       },
     ],
     linkLabel: "Product (Un)Conference ’26",
