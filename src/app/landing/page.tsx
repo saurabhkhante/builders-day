@@ -55,7 +55,6 @@ export default function LandingPage() {
       />
       <Hero />
       <Ticker />
-      <Positioning />
       <Agenda />
       {SHOW_SPEAKERS ? <Speakers /> : null}
       <Mentors />
@@ -237,44 +236,6 @@ function Ticker() {
   );
 }
 
-/* ---------- Positioning: Speedrun is solo ---------- */
-
-function Positioning() {
-  return (
-    <section aria-labelledby="positioning-title" className="border-b border-rule">
-      <div className="frame py-16 md:py-24">
-        <Reveal>
-          <p className="eyebrow flex items-center gap-2.5 text-muted">
-            <span aria-hidden="true" className="inline-block size-2.5 rounded-[2px] bg-crimson" />
-            {c.positioning.eyebrow}
-          </p>
-          <h2
-            id="positioning-title"
-            className="mt-5 font-serif text-[clamp(48px,9vw,128px)] leading-[0.95] font-bold tracking-[-0.04em] text-balance text-ink"
-          >
-            {c.positioning.title}
-          </h2>
-        </Reveal>
-        <RevealGroup
-          as="ul"
-          stagger={0.08}
-          className="mt-10 grid gap-8 border-t border-ink/20 pt-8 md:mt-14 md:grid-cols-3 md:gap-10 md:pt-10"
-        >
-          {c.positioning.points.map((p) => (
-            <RevealItem as="li" key={p.title} y={14} className="flex flex-col gap-3">
-              <h3 className="flex items-center gap-3 font-serif text-[clamp(26px,3vw,36px)] leading-[1.05] font-bold tracking-[-0.02em] text-ink">
-                <span aria-hidden="true" className="inline-block size-2.5 shrink-0 rotate-45 bg-crimson" />
-                {p.title}
-              </h3>
-              <p className="max-w-[36ch] text-[17px] leading-[1.55] text-pretty text-ink/80 md:text-[18px]">{p.body}</p>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- Day 2 agenda ---------- */
 
 function Agenda() {
@@ -364,8 +325,38 @@ function Agenda() {
             );
           })}
         </RevealGroup>
+
+        <Positioning />
       </div>
     </section>
+  );
+}
+
+/** Speedrun is solo: sits under the format cards, a step below the section title. */
+function Positioning() {
+  return (
+    <div className="mt-14 grid gap-8 border-t border-rule pt-10 md:mt-20 md:grid-cols-12 md:gap-8 md:pt-14">
+      <Reveal className="md:col-span-4">
+        <p className="eyebrow flex items-center gap-2.5 text-muted">
+          <span aria-hidden="true" className="inline-block size-2.5 rounded-[2px] bg-crimson" />
+          {c.positioning.eyebrow}
+        </p>
+        <h3 className="mt-4 font-serif text-[clamp(32px,3.6vw,48px)] leading-[1.02] font-bold tracking-[-0.03em] text-balance text-ink">
+          {c.positioning.title}
+        </h3>
+      </Reveal>
+      <RevealGroup as="ul" stagger={0.08} className="grid gap-7 sm:grid-cols-3 sm:gap-6 md:col-span-8 md:gap-8">
+        {c.positioning.points.map((p) => (
+          <RevealItem as="li" key={p.title} y={12} className="flex flex-col gap-2.5">
+            <h4 className="flex items-start gap-2.5 font-serif text-[22px] leading-[1.15] font-bold text-ink md:text-[24px]">
+              <span aria-hidden="true" className="mt-[0.45em] inline-block size-2 shrink-0 rotate-45 bg-crimson" />
+              {p.title}
+            </h4>
+            <p className="text-[15px] leading-relaxed text-pretty text-muted md:text-base">{p.body}</p>
+          </RevealItem>
+        ))}
+      </RevealGroup>
+    </div>
   );
 }
 
