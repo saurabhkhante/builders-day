@@ -246,7 +246,7 @@ export const content = {
       { label: "Who", value: "Just you. Everyone’s a builder" },
       { label: "Where", value: "Bengaluru, in person" },
       { label: "Bring", value: "A laptop and your AI tools" },
-      { label: "Credits", value: "$500 in Claude credits", href: "#pass" as const },
+      { label: "Credits", value: "$1M+ in AI credits", href: "#prizes" as const },
     ],
   },
 
