@@ -281,7 +281,15 @@ export const content = {
     items: [
       {
         q: "Where do the problems come from?",
-        a: "Requests from Founders, Operators and VCs. People building and backing AI companies share problems they want solved. You pick one and build a working answer during the session. The requests are live now: see them in the Problems section above.",
+        a: "Requests from Founders, Operators and VCs. People building and backing AI companies share problems they want solved. Pick one, or bring your own, and build a working answer during the session. The requests are live now: see them in the Problems section above.",
+      },
+      {
+        q: "Can I choose my own problem?",
+        a: "Yes. The requests are a starting point, not a rule. If there’s a problem you care about more, build that.",
+      },
+      {
+        q: "Can I start building before the day?",
+        a: "No. Everyone starts at 1:00 PM on Sun 22 Nov and builds in the same four hours. Come with ideas, not code.",
       },
       {
         q: "How do I get in?",
