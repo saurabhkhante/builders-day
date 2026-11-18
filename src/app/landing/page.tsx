@@ -336,7 +336,7 @@ function Agenda() {
 function Positioning() {
   return (
     <div className="mt-14 grid gap-8 border-t border-rule pt-10 md:mt-20 md:grid-cols-12 md:gap-8 md:pt-14">
-      <Reveal className="md:col-span-4">
+      <Reveal className="md:col-span-3">
         <p className="eyebrow flex items-center gap-2.5 text-muted">
           <span aria-hidden="true" className="inline-block size-2.5 rounded-[2px] bg-crimson" />
           {c.positioning.eyebrow}
@@ -345,14 +345,20 @@ function Positioning() {
           {c.positioning.title}
         </h3>
       </Reveal>
-      <RevealGroup as="ul" stagger={0.08} className="grid gap-7 sm:grid-cols-3 sm:gap-6 md:col-span-8 md:gap-8">
+      {/* Same column rhythm as the Problems steps: dividers between columns, marker above, title and text on one left edge. */}
+      <RevealGroup as="ul" stagger={0.08} className="grid border-t border-rule md:col-span-9 md:grid-cols-3 md:border-t-0">
         {c.positioning.points.map((p) => (
-          <RevealItem as="li" key={p.title} y={12} className="flex flex-col gap-2.5">
-            <h4 className="flex items-start gap-2.5 font-serif text-[22px] leading-[1.15] font-bold text-ink md:text-[24px]">
-              <span aria-hidden="true" className="mt-[0.45em] inline-block size-2 shrink-0 rotate-45 bg-crimson" />
-              {p.title}
-            </h4>
-            <p className="text-[15px] leading-relaxed text-pretty text-muted md:text-base">{p.body}</p>
+          <RevealItem
+            as="li"
+            key={p.title}
+            y={12}
+            className="flex flex-col gap-4 border-b border-rule py-6 md:border-r md:border-b-0 md:px-7 md:py-1 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+          >
+            <span aria-hidden="true" className="inline-block size-2.5 rotate-45 bg-crimson" />
+            <div>
+              <h4 className="font-serif text-[22px] leading-tight font-bold text-ink md:text-[24px]">{p.title}</h4>
+              <p className="mt-2 text-[15px] leading-relaxed text-muted md:text-base">{p.body}</p>
+            </div>
           </RevealItem>
         ))}
       </RevealGroup>
@@ -820,7 +826,7 @@ function Faq() {
       className="scroll-mt-20 border-b border-rule"
     >
       <div className="frame grid gap-10 py-16 md:grid-cols-12 md:gap-8 md:py-24">
-        <Reveal className="md:col-span-4">
+        <Reveal className="md:col-span-3">
           <h2
             id="faq-title"
             className="font-serif text-headline font-bold text-ink md:sticky md:top-[calc(var(--bar-h)+32px)]"
