@@ -55,6 +55,7 @@ export default function LandingPage() {
       />
       <Hero />
       <Ticker />
+      <Positioning />
       <Agenda />
       {SHOW_SPEAKERS ? <Speakers /> : null}
       <Mentors />
@@ -232,6 +233,44 @@ function Ticker() {
           </li>
         ))}
       </Marquee>
+    </section>
+  );
+}
+
+/* ---------- Positioning: Speedrun is solo ---------- */
+
+function Positioning() {
+  return (
+    <section aria-labelledby="positioning-title" className="border-b border-rule">
+      <div className="frame py-16 md:py-24">
+        <Reveal>
+          <p className="eyebrow flex items-center gap-2.5 text-muted">
+            <span aria-hidden="true" className="inline-block size-2.5 rounded-[2px] bg-crimson" />
+            {c.positioning.eyebrow}
+          </p>
+          <h2
+            id="positioning-title"
+            className="mt-5 font-serif text-[clamp(48px,9vw,128px)] leading-[0.95] font-bold tracking-[-0.04em] text-balance text-ink"
+          >
+            {c.positioning.title}
+          </h2>
+        </Reveal>
+        <RevealGroup
+          as="ul"
+          stagger={0.08}
+          className="mt-10 grid gap-8 border-t border-ink/20 pt-8 md:mt-14 md:grid-cols-3 md:gap-10 md:pt-10"
+        >
+          {c.positioning.points.map((p) => (
+            <RevealItem as="li" key={p.title} y={14} className="flex flex-col gap-3">
+              <h3 className="flex items-center gap-3 font-serif text-[clamp(26px,3vw,36px)] leading-[1.05] font-bold tracking-[-0.02em] text-ink">
+                <span aria-hidden="true" className="inline-block size-2.5 shrink-0 rotate-45 bg-crimson" />
+                {p.title}
+              </h3>
+              <p className="max-w-[36ch] text-[17px] leading-[1.55] text-pretty text-ink/80 md:text-[18px]">{p.body}</p>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </div>
     </section>
   );
 }

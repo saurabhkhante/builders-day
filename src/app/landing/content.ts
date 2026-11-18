@@ -67,6 +67,17 @@ export const content = {
     "Mentors on the floor",
   ],
 
+  /** Positioning band right under the ticker: Speedrun is solo. Set 2026-11-18. */
+  positioning: {
+    eyebrow: "Speedrun is solo",
+    title: "Everyone’s a builder.",
+    points: [
+      { title: "Just you", body: "No teams, no groups. One builder, one build, from first prompt to demo." },
+      { title: "A one-person company", body: "Ship in four hours what used to take a team. Your AI tools fill in the rest of the org chart." },
+      { title: "Open innovation", body: "Real problems from founders, operators and VCs. Any stack, any tool, your call." },
+    ],
+  },
+
   // Format only, no timings. Buildathon sits in the middle and is the highlighted card.
   agenda: {
     eyebrow: "Day 2 · Sun 22 Nov",
