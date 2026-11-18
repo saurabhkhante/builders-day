@@ -61,7 +61,9 @@ export const content = {
     "Requests from Founders, Operators and VCs",
     "$1M+ in credits",
     "$5,000 in cash prizes",
-    "Solo or in a group of up to 2",
+    "Open innovation",
+    "One-person companies",
+    "Everyone’s a builder",
     "Mentors on the floor",
   ],
 
@@ -72,7 +74,7 @@ export const content = {
     body: "Talks to get the ideas flowing, an afternoon of building, and a panel to close it out. All on one Builder’s Pass.",
     formats: [
       { n: "01", title: "Lightning talks", body: "Short, sharp talks on where things are heading. Longevity, physical AI, climate, education, space." },
-      { n: "02", title: "Speedrun", body: "Our buildathon: four hours on a real problem from a founder, operator or VC. AI tools in hand, mentors on the floor. The best builds demo on stage.", tag: "The main event", featured: true },
+      { n: "02", title: "Speedrun", body: "Our buildathon, solo: four hours on a real problem from a founder, operator or VC. Just you and your AI tools, mentors on the floor. The best builds demo on stage.", tag: "The main event", featured: true },
       { n: "03", title: "Panels", body: "Your next user isn’t human. People building for agents, on what changes." },
     ],
   },
@@ -241,7 +243,7 @@ export const content = {
     eyebrow: "Sun 22 Nov · Bengaluru",
     title: "The build afternoon",
     facts: [
-      { label: "Who", value: "Solo or a group of up to 2" },
+      { label: "Who", value: "Just you. Everyone’s a builder" },
       { label: "Where", value: "Bengaluru, in person" },
       { label: "Bring", value: "A laptop and your AI tools" },
       { label: "Credits", value: "$500 in Claude credits", href: "#pass" as const },
@@ -276,8 +278,8 @@ export const content = {
         link: true,
       },
       {
-        q: "Solo or team?",
-        a: "Either works. Come solo or in a group of up to 2 people.",
+        q: "Can I bring a team?",
+        a: "No. Speedrun is solo: one builder, one build, like a one-person company. Everyone’s a builder here.",
       },
       {
         q: "Do I get credits?",
