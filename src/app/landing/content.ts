@@ -285,7 +285,7 @@ export const content = {
       },
       {
         q: "Can I choose my own problem?",
-        a: "No. Every build answers one of the requests from founders, operators and VCs in the Problems section above.",
+        a: "Yes. Pick one of the requests in the Problems section above, or bring a problem of your own. Either way, you start building at 1:00 PM on the day.",
       },
       {
         q: "Can I start building before the day?",
