@@ -95,10 +95,10 @@ export const content = {
     title: "Learn from the best",
     /** Grid order, four per row on desktop (set 2026-11-19). Names not listed here go at the end. */
     order: [
-      "Mani", "Vikas Bansal", "Vikrama Dhiman", "Aparna Chugh",
-      "Syed Adil", "Mahesh Narayanan", "Sanath Kumar", "Sripriya GN",
-      "Kiran Bangalore", "Nishant Chandra", "Nithin Rangarajan", "Isha Inani",
-      "Ranjeet Walunj", "Pratik Poddar", "Prashanth Rao", "Rohit Khanna",
+      "Kiran Bangalore", "Pratik Poddar", "Vikas Bansal", "Aparna Chugh",
+      "Mani", "Vikrama Dhiman", "Rohit Khanna", "Sripriya GN",
+      "Ranjeet Walunj", "Prashanth Rao", "Nithin Rangarajan", "Isha Inani",
+      "Syed Adil", "Mahesh Narayanan", "Sanath Kumar", "Nishant Chandra",
     ],
     soon: "Announcing soon",
     /**
