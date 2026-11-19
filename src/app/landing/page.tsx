@@ -375,25 +375,24 @@ function Speakers() {
       aria-labelledby="speakers-title"
       className="on-cream scroll-mt-20 border-b border-rule bg-cream text-cream-ink"
     >
-      <div className="frame py-16 md:py-28">
-        <Reveal className="text-center">
-          <p className="eyebrow text-cream-muted">{c.speakers.eyebrow}</p>
-          <h2 id="speakers-title" className="page-title mt-5 text-cream-ink">
+      {/* Same as the main UnConference page's speakers block (measured 2026-11-19): 1280px container, heading left at 3.5rem (3rem under 992px),
+          then a 4-column grid with 2rem gaps (296px cards), 3 columns under 992px, 2 under 768px, 80px section padding. */}
+      <div className="frame py-20">
+        <Reveal>
+          <h2 id="speakers-title" className="font-serif text-[48px] leading-[1.2] font-bold tracking-[-0.32px] text-cream-ink min-[992px]:text-[56px]">
             {c.speakers.title}
           </h2>
         </Reveal>
         <RevealGroup
           as="ul"
-          stagger={0.06}
-          className="mx-auto mt-10 flex max-w-[922px] flex-wrap justify-center gap-4 min-[480px]:gap-8 md:mt-14"
+          stagger={0.04}
+          className="mt-8 grid grid-cols-2 gap-8 min-[768px]:grid-cols-3 min-[992px]:grid-cols-4"
         >
-          {/* Main site's card size and gaps (1240px frame, 4-up cards = 286px, 2rem gap), three per row from md, two below; a short last row stays centred. */}
           {c.speakers.list.map((s, i) => (
             <RevealItem
               as="li"
               key={s.name || `soon-${i}`}
               y={16}
-              className="w-[calc((100%-1rem)/2)] min-[480px]:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)]"
             >
               <SpeakerCard speaker={s} soonLabel={c.speakers.soon} />
             </RevealItem>
@@ -404,7 +403,6 @@ function Speakers() {
               as="li"
               key={p.name}
               y={16}
-              className="w-[calc((100%-1rem)/2)] min-[480px]:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)]"
             >
               <SpeakerCard
                 speaker={{ kind: "image", name: p.name, role: p.role, company: p.company, session: `${p.role}, ${p.company}`, photo: p.photo }}
