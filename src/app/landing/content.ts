@@ -31,7 +31,7 @@ export const content = {
     menu: "Menu",
     links: [
       { label: "Format", href: "#agenda" },
-      { label: "Mentors", href: "#mentors" },
+      { label: "Speakers", href: "#speakers" },
       { label: "Prizes", href: "#prizes" },
       { label: "Problems", href: "#rfs" },
       { label: "Pass", href: "#pass" },
@@ -91,9 +91,8 @@ export const content = {
   },
 
   speakers: {
-    eyebrow: "Speakers",
+    eyebrow: "In the room",
     title: "Learn from the best",
-    more: "& more to be announced",
     soon: "Announcing soon",
     /**
      * kind "image": the main site's speaker card (name, role and logo are in the image).
@@ -114,7 +113,6 @@ export const content = {
   mentors: {
     eyebrow: "In the room",
     title: "Mentors & judges",
-    more: "& more to be announced",
     /** One grid, judges first. */
     list: [
       { name: "Pratik Poddar", role: "Partner", company: "Nexus Venture Partners", photo: "/brand/mentors/pratik-poddar.png" },
