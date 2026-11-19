@@ -97,8 +97,9 @@ export const content = {
     order: [
       "Kiran Bangalore", "Pratik Poddar", "Vikas Bansal", "Aparna Chugh",
       "Mani", "Vikrama Dhiman", "Rohit Khanna", "Sripriya GN",
-      "Ranjeet Walunj", "Prashanth Rao", "Nithin Rangarajan", "Isha Inani",
-      "Syed Adil", "Mahesh Narayanan", "Sanath Kumar", "Nishant Chandra",
+      "Ranjeet Walunj", "Prashanth Rao", "Nithin Rangarajan", "Nishant Nayak",
+      "Soumyadeep Mukherjee", "Ramneek Khurana", "Anirudh Gupta", "Pritam Roy",
+      "Kushal Khandelwal", "Syed Adil", "Mahesh Narayanan", "Sanath Kumar", "Nishant Chandra",
     ],
     soon: "Announcing soon",
     /**
@@ -126,13 +127,18 @@ export const content = {
     list: [
       { name: "Pratik Poddar", role: "Partner", company: "Nexus Venture Partners", photo: "/brand/mentors/pratik-poddar.png" },
       { name: "Kiran Bangalore", role: "Partner General Manager", company: "Ex-Microsoft", photo: "/brand/mentors/kiran-bangalore.png" },
+      { name: "Nishant Nayak", role: "VP Product & Engineering", company: "Rakuten India", photo: "/brand/mentors/nishant-nayak.png" },
+      { name: "Soumyadeep Mukherjee", role: "Co-Founder & CTO", company: "Dashverse", photo: "/brand/mentors/soumyadeep-mukherjee.png" },
+      { name: "Ramneek Khurana", role: "Co-Founder, Product x Tech", company: "Lenskart", photo: "/brand/mentors/ramneek-khurana.png" },
       { name: "Sripriya GN", role: "Head of Product", company: "NeoSapien", photo: "/brand/mentors/sripriya-gn.png" },
       { name: "Nithin Rangarajan", role: "VP Product", company: "Chargebee", photo: "/brand/mentors/nithin-rangarajan.png" },
       { name: "Prashanth Rao", role: "Senior Director and India Product Head", company: "Docusign", photo: "/brand/mentors/prashanth-rao.png" },
       { name: "Ranjeet Walunj", role: "CPTO", company: "Pluto", photo: "/brand/mentors/ranjeet-walunj.png" },
       { name: "Aparna Chugh", role: "Head of Product", company: "Atomicwork", photo: "/brand/mentors/aparna-chugh.png" },
-      { name: "Isha Inani", role: "Senior Director of Product", company: "Disney+ Hotstar", photo: "/brand/mentors/isha-inani.png" },
       { name: "Rohit Khanna", role: "VP Engineering and Site Lead", company: "CodeRabbit", photo: "/brand/mentors/rohit-khanna.png" },
+      { name: "Anirudh Gupta", role: "AVP, Engineering", company: "District by Zomato", photo: "/brand/mentors/anirudh-gupta.png" },
+      { name: "Pritam Roy", role: "Co-Founder", company: "Fibr AI", photo: "/brand/mentors/pritam-roy.png" },
+      { name: "Kushal Khandelwal", role: "Founder", company: "Brink AI Labs", photo: "/brand/mentors/kushal-khandelwal.png" },
     ] as { name: string; role: string; company: string; photo: string }[],
   },
 
