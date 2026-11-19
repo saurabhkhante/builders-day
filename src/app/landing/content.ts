@@ -97,7 +97,7 @@ export const content = {
     order: [
       "Kiran Bangalore", "Pratik Poddar", "Vikas Bansal", "Aparna Chugh",
       "Mani", "Vikrama Dhiman", "Rohit Khanna", "Sripriya GN",
-      "Ranjeet Walunj", "Prashanth Rao", "Nithin Rangarajan", "Nishant Nayak",
+      "Ranjeet Walunj", "Prashanth Rao", "Nithin Rangarajan", "Isha Inani", "Nishant Nayak",
       "Soumyadeep Mukherjee", "Ramneek Khurana", "Anirudh Gupta", "Pritam Roy",
       "Kushal Khandelwal", "Syed Adil", "Mahesh Narayanan", "Sanath Kumar", "Nishant Chandra",
     ],
@@ -135,6 +135,7 @@ export const content = {
       { name: "Prashanth Rao", role: "Senior Director and India Product Head", company: "Docusign", photo: "/brand/mentors/prashanth-rao.png" },
       { name: "Ranjeet Walunj", role: "CPTO", company: "Pluto", photo: "/brand/mentors/ranjeet-walunj.png" },
       { name: "Aparna Chugh", role: "Head of Product", company: "Atomicwork", photo: "/brand/mentors/aparna-chugh.png" },
+      { name: "Isha Inani", role: "Senior Director of Product", company: "Disney+ Hotstar", photo: "/brand/mentors/isha-inani.png" },
       { name: "Rohit Khanna", role: "VP Engineering and Site Lead", company: "CodeRabbit", photo: "/brand/mentors/rohit-khanna.png" },
       { name: "Anirudh Gupta", role: "AVP, Engineering", company: "District by Zomato", photo: "/brand/mentors/anirudh-gupta.png" },
       { name: "Pritam Roy", role: "Co-Founder", company: "Fibr AI", photo: "/brand/mentors/pritam-roy.png" },
