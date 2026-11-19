@@ -106,6 +106,8 @@ export const content = {
       { kind: "image", name: "Sanath Kumar", role: "Co-founder", company: "Base", session: "Lightning talk · Longevity", photo: "/brand/speakers/sanath-kumar.png" },
       { kind: "image", name: "Nishant Chandra", role: "Co-founder", company: "Newton School", session: "Lightning talk · AI Does the Work. You Make the Bet.", photo: "/brand/speakers/nishant-chandra.png" },
       { kind: "image", name: "Mani", role: "Head of Product", company: "Sarvam", session: "Workshop · How I AI: Builder’s Guide", photo: "/brand/speakers/mani.png" },
+      { kind: "image", name: "Vikas Bansal", role: "Product Head", company: "Groww", session: "Panel · Your Next 100M Users", photo: "/brand/speakers/vikas-bansal.png" },
+      { kind: "image", name: "Vikrama Dhiman", role: "CPO", company: "Ather", session: "CPO, Ather", photo: "/brand/speakers/vikrama-dhiman.png" },
     ] as { kind: "image" | "named" | "soon"; name: string; role: string; company: string; session: string; photo?: string }[],
   },
 
