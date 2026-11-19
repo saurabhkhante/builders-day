@@ -17,7 +17,7 @@ import { BackedBy } from "./_components/backed-by";
 import { BuildersPass } from "./_components/builders-pass";
 import { FloatingCta } from "./_components/floating-cta";
 import { NotchLink } from "./_components/notch-cta";
-import { SpeakerCard } from "./_components/speaker-card";
+import { SpeakerCard, type Speaker } from "./_components/speaker-card";
 import { TopBar } from "./_components/top-bar";
 import { PrizeAmount, ScrollType } from "./_components/motion-bits";
 import { CARD_CLASS, cardLabel, RequestCardBody, VISIBLE } from "../requests/_components/request-card";
@@ -367,6 +367,19 @@ function Positioning() {
 
 /* ---------- Speakers ---------- */
 
+/** Everyone in the speakers grid: speakers and mentors/judges, in c.speakers.order; anyone not named there goes last. */
+const inRoom: Speaker[] = (() => {
+  const all: Speaker[] = [
+    ...c.speakers.list,
+    ...c.mentors.list.map((p) => ({ kind: "image" as const, name: p.name, role: p.role, company: p.company, session: `${p.role}, ${p.company}`, photo: p.photo })),
+  ];
+  const rank = (n: string) => {
+    const i = (c.speakers.order as readonly string[]).indexOf(n);
+    return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+  };
+  return all.map((s, i) => ({ s, i })).sort((x, y) => rank(x.s.name) - rank(y.s.name) || x.i - y.i).map((x) => x.s);
+})();
+
 function Speakers() {
   return (
     // Cream band, like the speakers section on the main UnConference page.
@@ -388,26 +401,10 @@ function Speakers() {
           stagger={0.04}
           className="mt-8 grid grid-cols-2 gap-8 min-[768px]:grid-cols-3 min-[992px]:grid-cols-4"
         >
-          {c.speakers.list.map((s, i) => (
-            <RevealItem
-              as="li"
-              key={s.name || `soon-${i}`}
-              y={16}
-            >
+          {/* Speakers, mentors and judges in one grid, no labels (since 2026-11-19), in the order set by c.speakers.order. */}
+          {inRoom.map((s) => (
+            <RevealItem as="li" key={s.name} y={16}>
               <SpeakerCard speaker={s} soonLabel={c.speakers.soon} />
-            </RevealItem>
-          ))}
-          {/* Mentors and judges sit in the same grid, no separate heading (since 2026-11-19). */}
-          {c.mentors.list.map((p) => (
-            <RevealItem
-              as="li"
-              key={p.name}
-              y={16}
-            >
-              <SpeakerCard
-                speaker={{ kind: "image", name: p.name, role: p.role, company: p.company, session: `${p.role}, ${p.company}`, photo: p.photo }}
-                soonLabel=""
-              />
             </RevealItem>
           ))}
         </RevealGroup>
