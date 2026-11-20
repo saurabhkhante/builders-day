@@ -45,7 +45,11 @@ const ECOSYSTEM: Tile[] = [
   t("Divyam.ai", "divyam-color.svg", 788, 230, 58),
   t("Toast", "toast-color.svg", 67, 17, 40),
 ];
-const EXPERIENCE: Tile[] = [t("SuperErgo", "superergo-color.png", 2172, 724, 50)];
+const EXPERIENCE: Tile[] = [
+  t("metaforms", "metaforms-color.svg", 415, 53, 62),
+  t("Prosperr.io", "prosperr-color.svg", 486, 91, 60),
+  t("SuperErgo", "superergo-color.png", 2172, 724, 50),
+];
 const BUILD: Tile[] = [
   t("Apify", "apify-color.svg", 512, 141, 44),
   t("Crustdata", "crustdata-color.png", 585, 163, 50),
@@ -53,6 +57,9 @@ const BUILD: Tile[] = [
   t("Nebius Token Factory", "nebius-color.svg", 403, 55, 60),
   t("smallest.ai", "smallest-color.svg", 281, 46, 56),
 ];
+
+const MEDIA: Tile[] = [t("Buzzlab", "buzzlab-color.png", 900, 192, 60)];
+const TECH: Tile[] = [t("Introbot", "introbot-color.png", 900, 257, 62)];
 
 function LogoTile({ tile, size = "std" }: { tile: Tile; size?: Size }) {
   const aspect = ASPECT[size];
@@ -116,6 +123,8 @@ export function BackedBy({
     build: string;
     ecosystem?: string;
     experience?: string;
+    media?: string;
+    tech?: string;
   };
 }) {
   const grid = "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4";
@@ -138,6 +147,10 @@ export function BackedBy({
           <Group label={labels.ecosystem ?? "Ecosystem partners"} tiles={ECOSYSTEM} cols={grid} />
           <Group label={labels.experience ?? "Experience partners"} tiles={EXPERIENCE} cols={grid} />
           <Group label={labels.build} tiles={BUILD} cols={grid} />
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:gap-3 lg:grid-cols-4">
+            <Group label={labels.media ?? "Media partner"} tiles={MEDIA} cols="grid-cols-1" />
+            <Group label={labels.tech ?? "Tech partner"} tiles={TECH} cols="grid-cols-1" />
+          </div>
         </div>
       </div>
     </section>
