@@ -50,6 +50,17 @@ const EXPERIENCE: Tile[] = [
   t("Prosperr.io", "prosperr-color.svg", 486, 91, 60),
   t("SuperErgo", "superergo-color.png", 2172, 724, 50),
 ];
+// Gifting partners, in the main page's order.
+const GIFTING: Tile[] = [
+  t("GOAT Life", "goatlife-color.svg", 97, 40, 44),
+  t("Kreo", "kreo-color.png", 1200, 382, 40),
+  t("Local Ferment Co.", "localferment-color.png", 331, 198, 34),
+  t("Happilo", "happilo-color.png", 588, 263, 38),
+  t("Plum", "plum-color.svg", 800, 447, 50),
+  t("Uncanned", "uncanned-color.png", 815, 208, 54),
+  t("Männlich", "mannlich-color.png", 290, 73, 56),
+  t("Peping", "peping-color.png", 592, 118, 50),
+];
 const BUILD: Tile[] = [
   t("Apify", "apify-color.svg", 512, 141, 44),
   t("Crustdata", "crustdata-color.png", 585, 163, 50),
@@ -123,6 +134,7 @@ export function BackedBy({
     build: string;
     ecosystem?: string;
     experience?: string;
+    gifting?: string;
     media?: string;
     tech?: string;
   };
@@ -147,6 +159,7 @@ export function BackedBy({
           <Group label={labels.ecosystem ?? "Ecosystem partners"} tiles={ECOSYSTEM} cols={grid} />
           <Group label={labels.experience ?? "Experience partners"} tiles={EXPERIENCE} cols={grid} />
           <Group label={labels.build} tiles={BUILD} cols={grid} />
+          <Group label={labels.gifting ?? "Gifting partners"} tiles={GIFTING} cols={grid} />
           <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:gap-3 lg:grid-cols-4">
             <Group label={labels.media ?? "Media partner"} tiles={MEDIA} cols="grid-cols-1" />
             <Group label={labels.tech ?? "Tech partner"} tiles={TECH} cols="grid-cols-1" />
