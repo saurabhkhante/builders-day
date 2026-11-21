@@ -321,7 +321,7 @@ export const content = {
       },
       {
         q: "When do I get the credits?",
-        a: "Partner credits are shared at the venue on Sun 22 Nov, so being there is a must. Claude credits are added to the email Anthropic whitelisted for you: from Sun 22 Nov, 12 PM, tap Claim on the Anthropic card on the Credits page of the event app (unconference.theproductfolks.com) to see which one.",
+        a: "Partner credits are shared at the venue on Sun 22 Nov, so being there is a must. Claude credits go to the email you registered with on Sunday morning. Check the Credits page of the event app (unconference.theproductfolks.com) at 12 PM.",
       },
       {
         q: "How much in Claude credits do I get?",
@@ -329,7 +329,7 @@ export const content = {
       },
       {
         q: "Where do my Claude credits go?",
-        a: "To the email Anthropic whitelisted for you, which can be different from the one you registered with. From Sun 22 Nov, 12 PM, tap Claim on the Anthropic card on the Credits page of the event app (unconference.theproductfolks.com) to see which email.",
+        a: "To the email you registered with, on Sunday morning. Check the Credits page of the event app (unconference.theproductfolks.com) at 12 PM.",
       },
       {
         q: "I registered after 19 Nov. When do I get my Claude credits?",
