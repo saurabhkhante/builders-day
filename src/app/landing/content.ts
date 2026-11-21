@@ -316,12 +316,12 @@ export const content = {
       },
       {
         q: "Do I get credits?",
-        a: "Yes. Every builder gets Claude credits ($500 with a work email, $100 with a personal one), plus credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Sarvam and Token Factory by Nebius, and Descope’s startup plan if you qualify. You need to be at the venue to get them.",
+        a: "Yes. Every builder gets Claude credits ($500 with a work email, $100 with a personal one), plus credits from Apify, Crustdata, Divyam.ai, ElevenLabs, Plivo, Replit and Token Factory by Nebius, and Descope’s startup plan. Reserve and Builder’s Pass holders also get Sarvam credits, and Reserve gets two months of CodeRabbit Advanced. All subject to each partner’s T&C. First come, first served, and you need to be at the venue to get them.",
         link: true,
       },
       {
         q: "When do I get the credits?",
-        a: "Partner credits are shared at the venue on Sun 22 Nov, so being there is a must. Claude credits go straight to the email you registered with.",
+        a: "Partner credits are shared at the venue on Sun 22 Nov, so being there is a must. Claude credits are added to the email Anthropic whitelisted for you: from Sun 22 Nov, 12 PM, tap Claim on the Anthropic card on the Credits page of the event app (unconference.theproductfolks.com) to see which one.",
       },
       {
         q: "How much in Claude credits do I get?",
@@ -329,7 +329,7 @@ export const content = {
       },
       {
         q: "Where do my Claude credits go?",
-        a: "Straight to the email you registered with. Anthropic issues them directly, so keep an eye on that inbox.",
+        a: "To the email Anthropic whitelisted for you, which can be different from the one you registered with. From Sun 22 Nov, 12 PM, tap Claim on the Anthropic card on the Credits page of the event app (unconference.theproductfolks.com) to see which email.",
       },
       {
         q: "I registered after 19 Nov. When do I get my Claude credits?",
